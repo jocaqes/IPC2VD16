@@ -65,7 +65,7 @@ namespace HT1
                 n = int.Parse(textBox2.Text);
                 r = Math.Sqrt(m * m + n * n);
                 t = Math.Atan((double)n / m);
-                textBox3.Text = "r = " + r.ToString() +" theta = " + t.ToString();
+                textBox3.Text = "r = " + r.ToString() +" theta = " + t.ToString()+" 2012-12921";
             }catch
             {
                 textBox3.Text = "Error, valor invalido";
@@ -74,7 +74,7 @@ namespace HT1
 
         private int Factorial(int n)
         {
-            if (n == 1 || n== 0)
+            if (n == 1 || n==   0)
                 return 1;
             else
                 return n * (n - 1);
