@@ -36,7 +36,7 @@ namespace HT1
         }
 
 
-        private void Expand()
+        private void Expand()//producto notable
         {
             int m, n, x, c, y;
             try
@@ -49,6 +49,24 @@ namespace HT1
                 textBox3.Text = x.ToString() + "x^2 + " + c.ToString() + "x + " + y.ToString();
             }
             catch
+            {
+                textBox3.Text = "Error, valor invalido";
+            }
+        }
+
+
+        private void Complejos()
+        {
+            int m, n;
+            double r, t;
+            try
+            {
+                m = int.Parse(textBox1.Text);
+                n = int.Parse(textBox2.Text);
+                r = Math.Sqrt(m * m + n * n);
+                t = Math.Atan((double)n / m);
+                textBox3.Text = "r = " + r.ToString() +" theta = " + t.ToString();
+            }catch
             {
                 textBox3.Text = "Error, valor invalido";
             }
@@ -73,6 +91,11 @@ namespace HT1
         private void button2_Click(object sender, EventArgs e)
         {
             Expand();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Complejos();
         }
     }
 }
