@@ -1,0 +1,9 @@
+-Que entiende como "commit"?
+R:/una versión modificada del trabajo actual, puede ser solo un archivo o varios
+
+-Que entiende como "Merge"?
+R:/modificar el master con el contenido de una rama y eliminar la rama(ayuda de github)
+
+-Que entiende como "Pull" y "Push"?
+R:/push es insertar los commits del usuario a una rama, pull es una request para que los
+commits de la rama sean indorporados en el repositorio original(ayuda github)
