@@ -36,6 +36,24 @@ namespace HT1
         }
 
 
+        private void Expand()
+        {
+            int m, n, x, c, y;
+            try
+            {
+                m = int.Parse(textBox1.Text);
+                n = int.Parse(textBox2.Text);
+                x = m * m;
+                c = 2 * m * n;
+                y = n * n;
+                textBox3.Text = x.ToString() + "x^2 + " + c.ToString() + "x + " + y.ToString();
+            }
+            catch
+            {
+                textBox3.Text = "Error, valor invalido";
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,6 +68,11 @@ namespace HT1
                 textBox3.Text = "Error, valor invalido";
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Expand();
         }
     }
 }
