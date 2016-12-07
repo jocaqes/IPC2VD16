@@ -55,7 +55,7 @@ namespace HT1
         }
 
 
-        private void Complejos()
+        private void Complejos()//pasar de complejo rectangular a polar
         {
             int m, n;
             double r, t;
@@ -72,6 +72,33 @@ namespace HT1
             }
         }
 
+        private int Factorial(int n)
+        {
+            if (n == 1 || n== 0)
+                return 1;
+            else
+                return n * (n - 1);
+        }
+
+        private void Permutacion()
+        {
+            int m, n, r;
+            r = 0;
+            try
+            {
+                m = int.Parse(textBox1.Text);
+                n = int.Parse(textBox2.Text);
+                if (n <= m && n > 0 && m > 0)
+                    r = Factorial(m) / Factorial(m - n);
+                else
+                    textBox3.Text = "Error, valor invalido para permutacion";
+                textBox3.Text = r.ToString();
+            }
+            catch
+            {
+                textBox3.Text = "Error, valor invalido";
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -96,6 +123,11 @@ namespace HT1
         private void button3_Click(object sender, EventArgs e)
         {
             Complejos();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Permutacion();
         }
     }
 }
